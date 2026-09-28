@@ -8,10 +8,12 @@ import joblib
 from pathlib import Path
 from urllib.parse import quote
 @st.cache_resource
-def load_yield_model():
-   return joblib.load("ml_models/yield_model_deployment.pkl")
+import os
+import joblib
 
-yield_model = load_yield_model()
+def load_yield_model():
+    model_path = os.path.join("models", "yield_model_deployment.pkl")
+    return joblib.load(model_path)
 
 try:
     import requests
