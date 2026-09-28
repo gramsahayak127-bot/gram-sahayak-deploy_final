@@ -8,7 +8,6 @@ import os
 import joblib
 from pathlib import Path
 from urllib.parse import quote
-@st.cache_resource
 
 
 def load_yield_model():
