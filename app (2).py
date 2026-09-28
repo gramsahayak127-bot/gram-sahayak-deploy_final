@@ -4,12 +4,12 @@ import math
 import datetime
 import html
 import json
+import os
 import joblib
 from pathlib import Path
 from urllib.parse import quote
 @st.cache_resource
-import os
-import joblib
+
 
 def load_yield_model():
     model_path = os.path.join("models", "yield_model_deployment.pkl")
